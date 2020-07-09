@@ -36,4 +36,4 @@ var MenuExample = React.createClass({
     }
 });
 // Render the menu component on the page, and pass an array with menu options
-ReactDOM.render(<MenuExample items={ ['Home', 'Services', 'About', 'Contact us', 'Test'] } />,    document.getElementById('container'));
+ReactDOM.render(<MenuExample items={ ['Boards', 'Explore', 'Feed', 'Profile'] } />,    document.getElementById('container'));
