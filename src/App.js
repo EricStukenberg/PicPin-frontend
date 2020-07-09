@@ -8,21 +8,23 @@ import Profile from './containers/Profile';
 
 
 function App() {
-  return (
-    <div className="App">
-      <Router >
-        <Switch>
-          <Route exact path='/explore' render={props => 
-            <Explore {...props}/>}/>
-          <Route exact path='/boards' render={props => 
-            <Boards {...props}/>}/>
-          <Route exact path='/profile' render={props => 
-            <Profile {...props}/>}/>
-        </Switch>
-      </Router>
+  redner () {
+    return (
+      <div className="App">
+        <Router >
+          <Switch>
+            <Route exact path='/explore' render={props => 
+              <Explore {...props}/>}/>
+            <Route exact path='/boards' render={props => 
+              <Boards {...props}/>}/>
+            <Route exact path='/profile' render={props => 
+              <Profile {...props}/>}/>
+          </Switch>
+        </Router>
 
-    </div>
-  );
+      </div>
+    );
+  }
 }
 
 export default App;
