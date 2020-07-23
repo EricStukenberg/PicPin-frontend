@@ -1,20 +1,8 @@
-* {
-    box-sizing: border-box; 
-    text-decoration: none;
-  }
-  body {
-    margin: 0;
-    padding: 0;
-    color: white;
-    width: 100%;
-    height: 100vh;
-    font-family: Helvetica;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+
+
   .container ul {
+    text-decoration: none;
+
     display: flex;
     margin-bottom: auto;
     width: 100%;
@@ -25,6 +13,7 @@
   ul li {
     cursor: pointer;
     position: relative;
+
     margin: 0 1.4em;
     padding: 1.2em 1.6em;
     transition: all 0.2s;
@@ -42,7 +31,11 @@
     transition: all  0.2s;
   }
   ul li:hover {
-    background-color: rgb(189, 189, 189);
+    background-color: rgb(189, 189, 189, .7);
+    border-radius: 3%;
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5); 
+ 
+    filter: blur(.1px);
   }
   ul li:hover::before {
     bottom: 56px;
