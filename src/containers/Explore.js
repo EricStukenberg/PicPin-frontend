@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { api } from "../services/api";
+import ImageCard from '../fragments/ImageCard';
+
 // for testing 
 const API = 'http://localhost:3000/search_terms/random';
 class Explore extends Component {
@@ -30,11 +32,17 @@ class Explore extends Component {
     }
 
     render() {
-        return(
-            <div>
-                
-            </div>
-        )
+      return (
+        <div className="ui four column grid">
+          <div className="row">
+            {this.state.pics.map((pic) => {
+          return <ImageCard key={pic.id} pic={pic} /*handleClick={this.props.handleClick}*/ />
+          })
+          }
+            Collection of all random pics 
+          </div>
+        </div>
+      );
     }
 }
 
