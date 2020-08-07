@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
+import '../css/explore.css';
+
 import { api } from "../services/api";
 import ImageCard from '../fragments/ImageCard';
+
 
 // for testing 
 const API = 'http://localhost:3000/search_terms/random';
@@ -18,6 +21,7 @@ class Explore extends Component {
         .then(
           (result) => {
             console.log(result)
+            console.log(result[0].attribute.urls.thumb)
             this.setState({
                 pics: result
             });
@@ -33,8 +37,8 @@ class Explore extends Component {
 
     render() {
       return (
-        <div className="ui four column grid">
-          <div className="row">
+        <div refs='gallery-container' className='container-fluid gallery-container'>
+        <div className='row'>
             {this.state.pics.map((pic) => {
           return <ImageCard key={pic.id} pic={pic} /*handleClick={this.props.handleClick}*/ />
           })
