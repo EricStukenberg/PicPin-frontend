@@ -20,8 +20,8 @@ class Explore extends Component {
         .then(res => res.json())
         .then(
           (result) => {
-            console.log(result)
-            console.log(result[0].attribute.urls.thumb)
+            console.log(result[0])
+            console.log(result[0].attribute.table.urls.thumb)
             this.setState({
                 pics: result
             });
